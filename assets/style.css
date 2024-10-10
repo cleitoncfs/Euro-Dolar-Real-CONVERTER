@@ -1,0 +1,102 @@
+:root {
+    --background: #FFF;
+    --primary: #333333;
+    --foreground: #e7f4c9;
+    --secondary: #909090;
+    --secondary-light: #c8c8c8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--primary);
+}
+
+header {
+    text-align: center;
+    margin: 4rem 2rem;
+}
+
+header img {
+    width: auto;
+    height: 8rem;
+}
+
+main {
+    margin: 3rem;
+}
+
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--foreground);
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 80rem;
+    border-radius: 8px;
+}
+
+main section span {
+    margin-right: 1rem;
+    color: var(--secondary-light);
+    font-size: 4rem;
+}
+
+main section input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    color: var(--secondary);
+    font-size: 4rem;
+    font-weight: bold;
+    border: 0;
+    outline: none;
+    text-align: right;
+    padding: 0.5rem;
+}
+
+main section input::placeholder {
+    color: var(--secondary-light);
+}
+
+footer {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--secondary);
+}
+
+/* Ajustes adicionais para layout consistente */
+@media (min-width: 768px) {
+    main section {
+        max-width: 60rem;
+    }
+}
+
+@media (max-width: 768px) {
+    main section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main section span {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+    }
+
+    main section input {
+        font-size: 3rem;
+    }
+}
