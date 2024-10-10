@@ -33,28 +33,37 @@ async function fetchExchangeRates() {
 }
 
 // Adiciona eventos para calcular ao alterar os valores dos campos
-eurInput.addEventListener("keyup", () => {
-    // Substitui o ponto pela vírgula se presente
+eurInput.addEventListener("input", () => {
+    // Substitui ponto por vírgula e atualiza o valor
     eurInput.value = eurInput.value.replace(".", ",");
-    
-    // Converte os valores
+    // Chama a função de conversão
     convert("eur-to-brl");
     convert("eur-to-usd");
-    
-    // Formata o valor do euro para ter vírgula
+});
+
+// Formata o valor do euro quando o usuário sai do campo
+eurInput.addEventListener("blur", () => {
     eurInput.value = formatCurrency(eurInput.value);
 });
 
-brlInput.addEventListener("keyup", () => {
+brlInput.addEventListener("input", () => {
     brlInput.value = brlInput.value.replace(".", ","); // Substitui o ponto pela vírgula
     convert("brl-to-eur");
     convert("brl-to-usd");
 });
 
-usdInput.addEventListener("keyup", () => {
+brlInput.addEventListener("blur", () => {
+    brlInput.value = formatCurrency(brlInput.value);
+});
+
+usdInput.addEventListener("input", () => {
     usdInput.value = usdInput.value.replace(".", ","); // Substitui o ponto pela vírgula
     convert("usd-to-eur");
     convert("usd-to-brl");
+});
+
+usdInput.addEventListener("blur", () => {
+    usdInput.value = formatCurrency(usdInput.value);
 });
 
 // Função para formatar os valores para o formato de moeda brasileiro
