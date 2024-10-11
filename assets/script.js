@@ -1,5 +1,5 @@
 const API_KEY = 'a83d14f1969d77f85b8c15212c878782'; // Sua chave da API do Fixer.io
-const API_URL = `http://data.fixer.io/api/latest?access_key=${API_KEY}&symbols=USD,BRL`;
+const API_URL = `https://data.fixer.io/api/latest?access_key=${API_KEY}&symbols=USD,BRL`;
 
 // Seleção dos elementos no HTML
 let usdInput = document.querySelector("#usd");
