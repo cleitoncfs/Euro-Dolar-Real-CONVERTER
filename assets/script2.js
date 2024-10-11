@@ -1,5 +1,7 @@
+// Este código funciona com alteração manual dos valores, sem auxilio de API
+
 let dolar = 5.1;  // Taxa de conversão USD -> BRL
-let euro = 5.5;   // Taxa de conversão EUR -> BRL
+let euro = 6.1;   // Taxa de conversão EUR -> BRL
 
 let usdInput = document.querySelector("#usd");
 let brlInput = document.querySelector("#brl");
